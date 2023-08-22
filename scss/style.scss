@@ -9,7 +9,9 @@
 }
 
 .block__heder {
-    background-image: url(/assets/images/illustration-sign-up-mobile.svg);
+    background-image: url(../assets/images/illustration-sign-up-mobile.svg);
+    background-size: cover;
+    border-radius: 0 0 20px 20px;
     width: 100%;
     height: 285px;
  }
@@ -24,22 +26,48 @@
     &__descriptionList {
         list-style: none;
         font-size: 0.95rem;
+        padding: 0;
+        width: 100%;
         &__elements {
-            color: aqua;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+           display: flex;
+           align-items: start;
+           padding-bottom: 10px;
+           &__icon {
+            padding-right: 18px;
+           }  
         }
     }
    
     
 }
 
-
-
-
-
+.block__form {
+    display: flex;
+    flex-direction: column;
+    &__label {
+        font-size: 0.8rem;
+        font-weight: 700;
+        padding-top: 13px;
+      
+    }
+    &__input {
+        width: 100%;
+        height: 56px;
+        margin-top: 13px;
+        border: 1.5px solid $color-grey;
+        border-radius: 10px;
+        text-indent: 20px;
+    }
+    &__submit {
+        width: 100%;
+        height: 56px;
+        border-radius: 10px;
+        background-color: $color-dark-slate-grey;
+        border: none;
+        margin-top: 24px;
+        color: white;
+    }
+}
 
 
 

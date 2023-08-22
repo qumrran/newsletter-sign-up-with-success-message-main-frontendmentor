@@ -16,7 +16,9 @@ body {
 }
 
 .block__heder {
-  background-image: url(/assets/images/illustration-sign-up-mobile.svg);
+  background-image: url(../assets/images/illustration-sign-up-mobile.svg);
+  background-size: cover;
+  border-radius: 0 0 20px 20px;
   width: 100%;
   height: 285px;
 }
@@ -30,13 +32,43 @@ body {
 .block__main__descriptionList {
   list-style: none;
   font-size: 0.95rem;
+  padding: 0;
+  width: 100%;
 }
 .block__main__descriptionList__elements {
-  color: aqua;
+  display: flex;
+  align-items: start;
+  padding-bottom: 10px;
+}
+.block__main__descriptionList__elements__icon {
+  padding-right: 18px;
+}
+
+.block__form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+.block__form__label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding-top: 13px;
+}
+.block__form__input {
+  width: 100%;
+  height: 56px;
+  margin-top: 13px;
+  border: 1.5px solid hsl(231, 7%, 60%);
+  border-radius: 10px;
+  text-indent: 20px;
+}
+.block__form__submit {
+  width: 100%;
+  height: 56px;
+  border-radius: 10px;
+  background-color: hsl(234, 29%, 20%);
+  border: none;
+  margin-top: 24px;
+  color: white;
 }
 
 .popup {
