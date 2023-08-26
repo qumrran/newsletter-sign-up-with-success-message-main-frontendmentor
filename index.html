@@ -29,7 +29,11 @@
         </ul>
 
         <form action="#" class="block__form">
-            <label for="" class="block__form__label"> Email address
+            <label for="" class="block__form__label"> 
+               <div class="block__form__label__box">
+                    <span class="block__form__label__box__description"> Email address</span>
+                    <span class="block__form__label__box__error">Valid email required</span>
+               </div>
                 <input class="block__form__input" type="email" placeholder="email@company.com" required>
             </label>
             <button type="submit" class="block__form__submit"> Subscribe to monthly newsletter</button>
@@ -37,15 +41,15 @@
 
     </main>
 
-    <div class="popup">
-        <img src="./assets/images/icon-success.svg" alt="icon success" class="popup__image">
-        <h1 class="popup__heading">Thanks for subscribing!</h1>
-        <p class="popup_description">  A confirmation email has been sent to ash@loremcompany.com. 
-            Please open it and click the button inside to confirm your subscription.</p>
+</div>
 
-        <button class="popup__button">Dismiss message</button>
-    </div>
+<div class="popup">
+    <img src="./assets/images/icon-success.svg" alt="icon success" class="popup__image">
+    <h1 class="popup__heading">Thanks for subscribing!</h1>
+    <p class="popup__description">  A confirmation email has been sent to <span class="popup__description__email">ash@loremcompany.com.</span> 
+        Please open it and click the button inside to confirm your subscription.</p>
 
+    <button class="popup__button">Dismiss message</button>
 </div>
 
 <script src="script.js"></script>

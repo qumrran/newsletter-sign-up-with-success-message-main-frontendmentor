@@ -9,31 +9,68 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+@media screen and (min-width: 950px) {
+  body {
+    min-height: 100vh;
+    background-color: hsl(235, 18%, 26%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .block {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+}
+@media screen and (min-width: 950px) {
+  .block {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 930px;
+    min-height: 640px;
+    background-color: white;
+    border-radius: 30px;
+  }
 }
 
 .block__heder {
+  display: block;
   background-image: url(../assets/images/illustration-sign-up-mobile.svg);
   background-size: cover;
   border-radius: 0 0 20px 20px;
   width: 100%;
   height: 285px;
 }
+@media screen and (min-width: 950px) {
+  .block__heder {
+    background-image: url(../assets/images/illustration-sign-up-desktop.svg);
+    width: 400px;
+    height: 590px;
+    margin: 24px;
+  }
+}
 
 .block__main {
   padding: 25px;
 }
+.block__main__heading {
+  color: hsl(234, 29%, 20%);
+}
+@media screen and (min-width: 950px) {
+  .block__main__heading {
+    font-size: 42px;
+  }
+}
 .block__main__description {
   font-size: 0.95rem;
+  color: hsl(234, 29%, 20%);
 }
 .block__main__descriptionList {
   list-style: none;
   font-size: 0.95rem;
   padding: 0;
   width: 100%;
+  color: hsl(234, 29%, 20%);
 }
 .block__main__descriptionList__elements {
   display: flex;
@@ -43,15 +80,30 @@ body {
 .block__main__descriptionList__elements__icon {
   padding-right: 18px;
 }
+@media screen and (min-width: 950px) {
+  .block__main {
+    width: 50%;
+    padding: 60px;
+  }
+}
 
 .block__form {
   display: flex;
   flex-direction: column;
 }
 .block__form__label {
+  display: flex;
+  flex-direction: column;
   font-size: 0.8rem;
   font-weight: 700;
   padding-top: 13px;
+}
+.block__form__label__box {
+  display: flex;
+  justify-content: space-between;
+}
+.block__form__label__box__error {
+  color: hsl(4, 100%, 67%);
 }
 .block__form__input {
   width: 100%;
@@ -60,6 +112,7 @@ body {
   border: 1.5px solid hsl(231, 7%, 60%);
   border-radius: 10px;
   text-indent: 20px;
+  cursor: pointer;
 }
 .block__form__submit {
   width: 100%;
@@ -69,8 +122,62 @@ body {
   border: none;
   margin-top: 24px;
   color: white;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+.block__form__submit:hover {
+  background-color: hsl(235, 18%, 26%);
+}
+
+.block__form__label__box__error {
+  display: none;
 }
 
 .popup {
   display: none;
+  color: hsl(234, 29%, 20%);
+  padding: 25px;
+}
+@media screen and (min-width: 950px) {
+  .popup {
+    padding: 55px;
+    width: 470px;
+    height: 470px;
+    background-color: white;
+    border-radius: 30px;
+  }
+}
+.popup__image {
+  padding: 150px 0 0 0px;
+}
+@media screen and (min-width: 950px) {
+  .popup__image {
+    padding: 0;
+  }
+}
+.popup__heading {
+  font-size: 40px;
+}
+.popup__description__email {
+  font-weight: bold;
+}
+.popup__button {
+  margin-top: 180px;
+  width: 100%;
+  height: 56px;
+  border-radius: 10px;
+  background-color: hsl(234, 29%, 20%);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s background, 0.3s box-shadow;
+}
+@media screen and (min-width: 950px) {
+  .popup__button {
+    margin-top: 15px;
+  }
+}
+.popup__button:hover {
+  background: linear-gradient(to right, hsl(4, 100%, 67%), rgb(255, 98, 0));
+  box-shadow: 0px 10px 27px -1px rgba(255, 98, 87, 0.47);
 }/*# sourceMappingURL=style.css.map */

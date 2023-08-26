@@ -1,33 +1,68 @@
 @import "reset";
 @import "variables";
 
+
+body {
+    @media screen and (min-width: 950px) {
+    min-height: 100vh;
+    background-color: $color-charcoal-grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+}
+
 .block {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+   
+    @media screen and (min-width: 950px) {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 930px;
+        min-height: 640px;
+        background-color: white;
+        border-radius: 30px;
+
+      }
    
 }
 
 .block__heder {
+    display: block;
     background-image: url(../assets/images/illustration-sign-up-mobile.svg);
     background-size: cover;
     border-radius: 0 0 20px 20px;
     width: 100%;
     height: 285px;
+    @media screen and (min-width: 950px) {
+        background-image: url(../assets/images/illustration-sign-up-desktop.svg);
+        width: 400px;
+        height: 590px;
+        margin: 24px;
+        
+      }
  }
 
 
 .block__main {
     
     padding: 25px;
+    &__heading {
+        color: $color-dark-slate-grey;
+        @media screen and (min-width: 950px) {
+            font-size: 42px;
+          }
+    }
+
     &__description {
         font-size: 0.95rem;
+        color: $color-dark-slate-grey;
     }
     &__descriptionList {
         list-style: none;
         font-size: 0.95rem;
         padding: 0;
         width: 100%;
+        color: $color-dark-slate-grey;
         &__elements {
            display: flex;
            align-items: start;
@@ -37,6 +72,10 @@
            }  
         }
     }
+    @media screen and (min-width: 950px) {
+        width: 50%;
+        padding: 60px;
+      }
    
     
 }
@@ -45,10 +84,18 @@
     display: flex;
     flex-direction: column;
     &__label {
+        display: flex;
+        flex-direction: column;
         font-size: 0.8rem;
         font-weight: 700;
         padding-top: 13px;
-      
+        &__box {
+            display: flex;
+            justify-content: space-between;
+            &__error { 
+                color: $color-tomato;
+            }
+        }
     }
     &__input {
         width: 100%;
@@ -57,6 +104,7 @@
         border: 1.5px solid $color-grey;
         border-radius: 10px;
         text-indent: 20px;
+        cursor: pointer;
     }
     &__submit {
         width: 100%;
@@ -66,14 +114,74 @@
         border: none;
         margin-top: 24px;
         color: white;
+        transition: background-color .3s;
+        cursor: pointer;
+    }
+
+    &__submit:hover {
+       background-color: $color-charcoal-grey;
     }
 }
 
 
-
-
+.block__form__label__box__error {
+    display: none;
+}
 
 
 .popup {
+
     display: none;
+    color: $color-dark-slate-grey;
+    padding: 25px;
+
+    @media screen and (min-width: 950px) {
+        padding: 55px;
+        width: 470px;
+        height: 470px;
+        background-color: white;
+        border-radius: 30px;
+      }
+    
+
+    &__image {
+        padding: 150px 0 0 0px;
+        @media screen and (min-width: 950px) {
+           padding: 0;
+          }
+    }
+    &__heading {
+        font-size: 40px;
+        
+    }
+    &__description {
+        &__email {
+            font-weight: bold;
+        }
+    }
+
+    &__button {
+        
+        margin-top: 180px;
+        width: 100%;
+        height: 56px;
+        border-radius: 10px;
+        background-color: $color-dark-slate-grey;
+        border: none;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s background, 0.3s box-shadow;
+
+
+        @media screen and (min-width: 950px) {
+          margin-top: 15px;
+          }
+        
+    }
+
+    &__button:hover {
+        background: linear-gradient(to right, $color-tomato, rgb(255, 98, 0));
+        box-shadow: 0px 10px 27px -1px rgba(255, 98, 87, 0.47);
+    }
+
 }
