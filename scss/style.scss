@@ -13,14 +13,16 @@ body {
 
 .block {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
    
     @media screen and (min-width: 950px) {
-        display: flex;
+        
         flex-direction: row-reverse;
-        width: 930px;
-        min-height: 640px;
+        width: 58.125rem;
+        min-height: 40rem;
         background-color: white;
-        border-radius: 30px;
+        border-radius: 1.875rem;
 
       }
    
@@ -30,14 +32,14 @@ body {
     display: block;
     background-image: url(../assets/images/illustration-sign-up-mobile.svg);
     background-size: cover;
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 1.25rem 1.25rem ;
     width: 100%;
-    height: 285px;
+    height: 17.813rem;
     @media screen and (min-width: 950px) {
         background-image: url(../assets/images/illustration-sign-up-desktop.svg);
-        width: 400px;
-        height: 590px;
-        margin: 24px;
+        width: 25rem;
+        height: 36.875rem;
+        margin: 1.5rem;
         
       }
  }
@@ -49,7 +51,7 @@ body {
     &__heading {
         color: $color-dark-slate-grey;
         @media screen and (min-width: 950px) {
-            font-size: 42px;
+            font-size: 2.625rem;
           }
     }
 
@@ -66,15 +68,15 @@ body {
         &__elements {
            display: flex;
            align-items: start;
-           padding-bottom: 10px;
+           padding-bottom: 0.625rem;
            &__icon {
-            padding-right: 18px;
+            padding-right: 1.125rem;
            }  
         }
     }
     @media screen and (min-width: 950px) {
         width: 50%;
-        padding: 60px;
+        padding: 3.75rem;
       }
    
     
@@ -88,7 +90,7 @@ body {
         flex-direction: column;
         font-size: 0.8rem;
         font-weight: 700;
-        padding-top: 13px;
+        padding-top: 1.063rem;
         &__box {
             display: flex;
             justify-content: space-between;
@@ -99,20 +101,20 @@ body {
     }
     &__input {
         width: 100%;
-        height: 56px;
-        margin-top: 13px;
-        border: 1.5px solid $color-grey;
-        border-radius: 10px;
-        text-indent: 20px;
+        height: 3.5rem;
+        margin-top: 0.813rem;
+        border: 0.094rem solid $color-grey;
+        border-radius: 0.625rem;
+        text-indent: 1.25rem;
         cursor: pointer;
     }
     &__submit {
         width: 100%;
-        height: 56px;
-        border-radius: 10px;
+        height: 3.5rem;
+        border-radius: 0.625rem;
         background-color: $color-dark-slate-grey;
         border: none;
-        margin-top: 24px;
+        margin-top: 1.5rem;
         color: white;
         transition: background-color .3s;
         cursor: pointer;
@@ -133,25 +135,25 @@ body {
 
     display: none;
     color: $color-dark-slate-grey;
-    padding: 25px;
+    padding: 1.563rem;
 
     @media screen and (min-width: 950px) {
-        padding: 55px;
-        width: 470px;
-        height: 470px;
+        padding: 3.438rem;
+        width: 29.375rem;
+        height: 29.375rem;
         background-color: white;
-        border-radius: 30px;
+        border-radius: 1.875rem;
       }
     
 
     &__image {
-        padding: 150px 0 0 0px;
+        padding: 9.375rem 0 0 0;
         @media screen and (min-width: 950px) {
            padding: 0;
           }
     }
     &__heading {
-        font-size: 40px;
+        font-size: 2.5rem;
         
     }
     &__description {
@@ -162,10 +164,10 @@ body {
 
     &__button {
         
-        margin-top: 180px;
+        margin-top: 11.25rem;
         width: 100%;
-        height: 56px;
-        border-radius: 10px;
+        height: 3.5rem;
+        border-radius: 0.625rem;
         background-color: $color-dark-slate-grey;
         border: none;
         color: white;
@@ -174,7 +176,7 @@ body {
 
 
         @media screen and (min-width: 950px) {
-          margin-top: 15px;
+          margin-top: 0.938rem;
           }
         
     }
